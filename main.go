@@ -16,6 +16,12 @@ var queryType = graphql.NewObject(graphql.ObjectConfig{
                 return "Hello World!", nil
             },
         },
+        "myLoveNumber": &graphql.Field{
+            Type: graphql.Int,
+            Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+                return 10, nil
+            },
+        },
     },
 })
 
